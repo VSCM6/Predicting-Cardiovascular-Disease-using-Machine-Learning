@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify, render_template
 
 # Create flask app
 flask_app = Flask(__name__,template_folder="template")
-model=pickle.load(open("Cardiovascular_Disease.p","rb"))
+model=pickle.load(open("Cardiovascular_disease.p","rb"))
 @flask_app.route("/")
 def Home():
     return render_template("index.html")
